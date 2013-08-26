@@ -19,8 +19,8 @@
 # along with We6jboisFreeSL.  If not, see <http://www.gnu.org/licenses/>.
 
 allow_offline = true
-
-version = 20130825015306
+//        YYYYMMDDHHMMSS
+version = 20130826013500
 appbase = http://nuaitp.net/we6jboisfreesl/we6jboisfreesl/%VERSION%
 latest = http://nuaitp.net/we6jboisfreesl/we6jboisfreesl/updates/getdown.txt
 
@@ -29,3 +29,6 @@ ui.install_error = http://we6jboisfreesl.blogspot.com/search/label/release
 
 code = We6jboisFreeSL.jar
 class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.App
+termcast.class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.TermCast
+#This should go to something that does not require input or output.
+upgrade.class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.Upgrade
