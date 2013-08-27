@@ -22,5 +22,47 @@ package say;
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
 public class Say {
-    
+    public static String[] report = new String[101];
+    public static int repcount;
+    public static int status;
+    Say(String platform, String s)
+    {
+        if (status == 0)
+        {
+            repcount = 0;
+            for(int i = 0; i <= 100; i++)
+            {
+                report[i] = "";
+            }
+        }
+    }
+    public static String reports(String platform)
+    {
+        if (repcount > 0 && status == 1)
+        {
+            repcount--;
+            return report[repcount] + "\n";
+        }
+        return "";
+    }
+    public static void it(String platform, String text)
+    {
+        System.out.println(text);
+    }
+    public static void info(String platform, String info)
+    {
+        System.out.println("info " + info);
+    }
+    public static void debug(String platform, String debug)
+    {
+        System.out.println("debug " + debug);
+    }
+    public static void error(String platform, String error)
+    {
+        System.out.println("error " + error);
+    }
+    public static void fatal(String platform, String fatal)
+    {
+        System.out.println("Fatal " + fatal);
+    }
 }
