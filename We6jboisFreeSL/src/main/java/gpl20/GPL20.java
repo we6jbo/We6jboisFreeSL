@@ -24,21 +24,21 @@ package gpl20;
 public class GPL20 {
     public GPL20(String platform)
     {
-        say.Say.info("----","Copyright (C) 2013 Jeremiah ONeal <joneal@nuaitp.net>");
-        say.Say.info("----","");
-        say.Say.info("----","This program is free software; you can redistribute it and/or");
-        say.Say.info("----","modify it under the terms of the GNU General Public License");
-        say.Say.info("----","as published by the Free Software Foundation; either version 2");
-        say.Say.info("----","of the License, or (at your option) any later version.");
-        say.Say.info("----","");
-        say.Say.info("----","This program is distributed in the hope that it will be useful,");
-        say.Say.info("----","but WITHOUT ANY WARRANTY; without even the implied warranty of");
-        say.Say.info("----","MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the");
-        say.Say.info("----","GNU General Public License for more details.");
-        say.Say.info("----","");
-        say.Say.info("----","You should have received a copy of the GNU General Public License");
-        say.Say.info("----","along with this program; if not, write to the Free Software");
-        say.Say.info("----","Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.");
+        say.Say.it("----","Copyright (C) 2013 Jeremiah ONeal <joneal@nuaitp.net>");
+        say.Say.it("----","");
+        say.Say.it("----","This program is free software; you can redistribute it and/or");
+        say.Say.it("----","modify it under the terms of the GNU General Public License");
+        say.Say.it("----","as published by the Free Software Foundation; either version 2");
+        say.Say.it("----","of the License, or (at your option) any later version.");
+        say.Say.it("----","");
+        say.Say.it("----","This program is distributed in the hope that it will be useful,");
+        say.Say.it("----","but WITHOUT ANY WARRANTY; without even the implied warranty of");
+        say.Say.it("----","MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the");
+        say.Say.it("----","GNU General Public License for more details.");
+        say.Say.it("----","");
+        say.Say.it("----","You should have received a copy of the GNU General Public License");
+        say.Say.it("----","along with this program; if not, write to the Free Software");
+        say.Say.it("----","Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.");
 
     }
 }
