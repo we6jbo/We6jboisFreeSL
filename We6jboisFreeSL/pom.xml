@@ -46,6 +46,8 @@
                     <tasks>
                         <echo>Copying getdown.txt to target directory</echo>
                         <copy file="resources/getdown.txt" tofile="${basedir}/target/getdown.txt"/>
+                        <echo>Copying We6jboisFreeSL.ini to target directory</echo>
+                        <copy file="resources/We6jboisFreeSL.ini" tofile="${basedir}/target/We6jboisFreeSL.ini"/>
                     </tasks>
                 </configuration>
                 </execution>
