@@ -22,7 +22,7 @@ package gpl20;
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
 public class GPL20 {
-    GPL20(String platform)
+    public GPL20(String platform)
     {
         say.Say.info("----","Copyright (C) 2013 Jeremiah ONeal <joneal@nuaitp.net>");
         say.Say.info("----","");
