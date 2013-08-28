@@ -47,7 +47,7 @@
                    <goal>attached</goal>
                  </goals>
              <configuration>
-               <<descriptorRefs>
+               <descriptorRefs>
                  <descriptorRef>jar-with-dependencies</descriptorRef>
                </descriptorRefs>
              </configuration>
@@ -70,6 +70,9 @@
                         <copy file="resources/getdown.txt" tofile="${basedir}/target/getdown.txt"/>
                         <echo>Copying We6jboisFreeSL.ini to target directory</echo>
                         <copy file="resources/We6jboisFreeSL.ini" tofile="${basedir}/target/We6jboisFreeSL.ini"/>
+                        <echo>Copying instructions.txt to target directory</echo>
+                        <copy file="resources/instructions.txt" tofile="${basedir}/target/instructions.txt"/>
+
                     </tasks>
                 </configuration>
                 </execution>
