@@ -72,7 +72,8 @@
                         <copy file="resources/We6jboisFreeSL.ini" tofile="${basedir}/target/We6jboisFreeSL.ini"/>
                         <echo>Copying instructions.txt to target directory</echo>
                         <copy file="resources/instructions.txt" tofile="${basedir}/target/instructions.txt"/>
-
+                        <echo>Copying We6jboisFreeSL.settings to target directory</echo>
+                        <copy file="resources/We6jboisFreeSL.settings" tofile="${basedir}/target/We6jboisFreeSL.settings"/>
                     </tasks>
                 </configuration>
                 </execution>
