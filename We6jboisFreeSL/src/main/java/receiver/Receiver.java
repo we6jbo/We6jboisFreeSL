@@ -17,10 +17,78 @@
  */
 package receiver;
 
+import java.net.*;
+import java.io.*;
+
 /**
  *
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
-public class Receiver {
+public class Receiver implements Runnable{
+    Thread answering;
+    Socket socket;
     
+    public Receiver(String platform)
+    {
+        StartController("----");
+    }
+    public void StartController(String platform)
+    {
+        int port = Integer.parseInt(data.Data.connectionport.trim());
+        try
+        {
+            ServerSocket srv = new ServerSocket(port);
+            while(true)
+            {
+                try
+                {
+                    Thread.sleep(5000);
+                    answering = new Thread(this, "Answers incoming connections");
+                
+                    socket = srv.accept();
+                    answering.start();
+                }
+                catch(IOException e)
+                {
+                }
+                catch (InterruptedException e)
+                {
+                }
+            }
+        }
+        catch(IOException e)
+        {
+        }
+        
+    }
+    public void run()
+    {
+        try
+        {
+            BufferedReader rd = new BufferedReader (new InputStreamReader(socket.getInputStream()));
+            BufferedWriter wr = new BufferedWriter (new OutputStreamWriter(socket.getOutputStream()));
+            wr.write("Connected!\n");
+            wr.flush();
+            String str = "";
+            while(str != null)
+            {
+                Thread.sleep(1000);
+                try
+                {
+                    str = rd.readLine();
+                }
+                catch(IOException e)
+                {
+                }
+                wr.write("You said " + str + "\n");
+                wr.flush(); //you can use str.equals.
+                }
+            }
+        catch (IOException e)
+        {
+        }
+        catch(InterruptedException e)
+        {
+        }
+    }
 }
