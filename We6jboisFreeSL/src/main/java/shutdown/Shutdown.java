@@ -28,15 +28,15 @@ public class Shutdown {
     }
     public void lfShutdown()
     {
-        ircservice.Ircservice ircserv = new ircservice.Ircservice();
         Runtime.getRuntime().addShutdownHook(new Thread()
         {
+            ircservice.Ircservice ircserv = new ircservice.Ircservice();
             public void run()
             {
+                ircserv.SendMessage("Shutdown hook.");
                 say.Say.debug("----", "Running add shutdown hook");
             }
         });
-        ircserv.SendMessage("Quitting!");
         say.Say.debug("----", "Quitting IRC");
     }
 }
