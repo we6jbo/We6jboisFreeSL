@@ -22,5 +22,40 @@ package data;
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
 public class Data {
+    public static String name = "";
+    public static String[] compareLocal = new String[10];
+    public static int fileLines = 10;
+    public static String connectionport = "2481";
     
+    public Data(String platform)
+    {
+        for (int i = 0; i <= (data.Data.compareLocal.length - 1); i++)
+        {
+            compareLocal[i] = "";
+        }
+    }    
+    public static int compareLocaltoRemote(String platform, int x, int y)
+    {       
+        if (x<=0 || x >= data.Data.fileLines || y <= 0 || y >= data.Data.fileLines)
+        {
+            return 0;
+        }
+        try
+        {
+            if(compareLocal[x].equals(filemanager.Filemanager.fileArray[y]))
+            {
+                return 0;
+            }
+        }
+        catch(NullPointerException e)
+        {
+            say.Say.error("----", e.toString());
+        }
+        return 1;
+    }
+    public static void save()
+    {
+        filemanager.Filemanager.save();
+    }
 }
+
