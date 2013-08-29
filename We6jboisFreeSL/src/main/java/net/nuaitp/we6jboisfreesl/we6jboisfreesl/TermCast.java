@@ -17,52 +17,52 @@
  */
 package net.nuaitp.we6jboisfreesl.we6jboisfreesl;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.*;
 
 /**
  *
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
 public class TermCast {
-public void main(String args[])
-{
-        Say.it(2,"changzes");
-        Say.what(2, "Yes sir");
-        Say.it(2, "Ok");
-        //      logger.info("Hello!");
-              BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-              System.out.println("By Jeremiah O'Neal - Aug 20, 2013");
-        System.out.println("Menu\n1. \n2. Exit");
-        int selection = 0;
-        do
-        {
-            try
-            {
-            System.out.print(">>");
-                selection = Integer.parseInt(br.readLine());
-            }
-            catch(IOException e)
-            {
-            }
-            System.out.println(selection);
-        switch(selection)
-        {
-            case 1:
-                System.out.println("You entered 1.");
-                break;
-            case 2:
-                break;
-            case 3:
-                System.out.println(selection + " does not exist. Did you mean to enter 2?");
-                break;
-        }
-    }while(selection != 2);    
-}
-    protected String sayHello(String input)
+    public void main(String args[])
     {
-        String output = "Hello " + input;
-        return output;
-    }
+        new gpl20.GPL20("----");    
+        Properties properties = new Properties();
+        try
+        {
+            properties.load(new FileInputStream("We6jboisFreeSL.ini"));
+        }
+        catch(IOException e)
+        {
+            say.Say.debug("----", e.toString());
+        }
+        new filemanager.Filemanager("termcast");
+        new data.Data("termcast");
+        new controller.Controller("---", "we6jbo.synchro.net", 25);
+        new shutdown.Shutdown();
+        try
+        {
+            ircservice.Ircservice ircserv = new ircservice.Ircservice();
+            ircserv.setVerbose(false);
+            ircserv.connect("irc.starlink-irc.org");
+            ircserv.joinChannel("#family_tree");
+            ircserv.SendMessage("Test.");
+            new receiver.Receiver("----");
+            //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            //ircserv.SendMessage(br.readLine().toString());
+        }
+        catch(Exception e)
+        {
+            say.Say.debug("----", e.toString());
+        }
+        try
+        {
+            Thread.sleep(1000);
+        }
+        catch (InterruptedException e)
+        {
+            say.Say.debug("----", e.toString());
+        } 
+    }   
 }
