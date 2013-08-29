@@ -18,19 +18,8 @@
 
 package net.nuaitp.we6jboisfreesl.we6jboisfreesl;
 
-import java.io.*;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-
-
-        
-/**
- * By: Jeremiah O'Neal
- * Created on: Aug 20, 2013
- */
 public class App 
 {
-//    private static final Logger logger = LoggerFactory.getLogger(App.class);
     public static void main( String[] args )
     {   
         TermCast termcast = new TermCast();
