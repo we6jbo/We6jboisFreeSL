@@ -74,6 +74,9 @@
                         <copy file="resources/instructions.txt" tofile="${basedir}/target/instructions.txt"/>
                         <echo>Copying We6jboisFreeSL.settings to target directory</echo>
                         <copy file="resources/We6jboisFreeSL.settings" tofile="${basedir}/target/We6jboisFreeSL.settings"/>
+                        <echo>Copying database.txt to target directory</echo>
+                        <copy file="resources/database.txt" tofile="${basedir}/target/database.txt"/>
+
                     </tasks>
                 </configuration>
                 </execution>
