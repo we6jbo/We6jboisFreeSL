@@ -1,9 +1,21 @@
 /*
- * By: Jeremiah O'Neal
- * Created on: Aug 20, 2013
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (C) 2013 Jeremiah ONeal <joneal@nuaitp.net>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
+
 package net.nuaitp.we6jboisfreesl.we6jboisfreesl;
 
 import org.junit.After;
@@ -51,17 +63,17 @@ public class AppTest {
   //  }
     /* You can probably delete this afterwards */
 
-    @Test
-    public void testSayHello()
-    {
-        TermCast termcast = new TermCast();
-        String input = "Maven";
-        String expected = "Hello " + input;
-        String result = termcast.sayHello(input);
-        assertEquals(expected, result);
+    //@Test
+    //public void testSayHello()
+    //{
+    //    TermCast termcast = new TermCast();
+    //    String input = "Maven";
+    //    String expected = "Hello " + input;
+    //    String result = termcast.sayHello(input);
+    //    assertEquals(expected, result);
         
     
 
-    }
+    //}
     //end
 }
