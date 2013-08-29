@@ -17,10 +17,49 @@
  */
 package controller;
 
+import java.net.*;
+import java.io.*;
 /**
  *
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
-public class Controller {
-    
+public class Controller implements Runnable{
+    Thread connecting;
+    Socket sock;
+    String saddr;
+    int port;
+    public Controller(String platform, String baddr, int bport)
+    {
+        saddr = baddr;
+        port = bport;
+        StartController("----");
+    }
+    public void StartController(String platform)
+    {
+        connecting = new Thread(this, "Makes outgoing connections");
+        connecting.start();
+    }
+    public void run()
+    {
+        try
+        {
+            InetAddress addr = InetAddress.getByName(saddr);
+            String str;
+            Socket sock = new Socket(addr, port);
+            BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(sock.getOutputStream()));
+            BufferedReader rd = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+            sock.setSoTimeout(5000);
+            while(true)
+            {
+                wr.write("Ok" + "\n");
+                wr.flush();
+                str = rd.readLine();
+                say.Say.info("----", str.toString());
+            }
+        }
+        catch(IOException e)
+        {
+            say.Say.error("----", e.toString());
+        }
+    }
 }
