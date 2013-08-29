@@ -22,28 +22,8 @@ package say;
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
 public class Say {
-    public static String[] report = new String[101];
-    public static int repcount;
-    public static int status;
-    Say(String platform, String s)
+    Say(String platform)
     {
-        if (status == 0)
-        {
-            repcount = 0;
-            for(int i = 0; i <= 100; i++)
-            {
-                report[i] = "";
-            }
-        }
-    }
-    public static String reports(String platform)
-    {
-        if (repcount > 0 && status == 1)
-        {
-            repcount--;
-            return report[repcount] + "\n";
-        }
-        return "";
     }
     public static void it(String platform, String text)
     {
