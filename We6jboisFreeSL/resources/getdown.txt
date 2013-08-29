@@ -20,7 +20,7 @@
 
 allow_offline = true
 //        YYYYMMDDHHMMSS
-version = 20130826013500
+version = 20130829020916
 appbase = http://nuaitp.net/we6jboisfreesl/we6jboisfreesl/%VERSION%
 latest = http://nuaitp.net/we6jboisfreesl/we6jboisfreesl/updates/getdown.txt
 
@@ -29,6 +29,6 @@ ui.install_error = http://we6jboisfreesl.blogspot.com/search/label/release
 
 code = We6jboisFreeSL.jar
 class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.App
-termcast.class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.TermCast
+termcast.class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.App
 #This should go to something that does not require input or output.
 upgrade.class = net.nuaitp.we6jboisfreesl.we6jboisfreesl.Upgrade
