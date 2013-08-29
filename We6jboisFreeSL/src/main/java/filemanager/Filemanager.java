@@ -17,10 +17,65 @@
  */
 package filemanager;
 
+import java.io.*;
+import java.net.*;
 /**
  *
  * @author Jeremiah ONeal <joneal@nuaitp.net>
  */
-public class Filemanager {
-    
+public class Filemanager implements Runnable{
+    Thread FileManagerThread;
+    public static String[] fileArray = new String[10];
+    public Filemanager(String platform)
+    {
+        StartFilemanager("----");
+    }
+    public void StartFilemanager(String platform)
+    {
+        FileManagerThread = new Thread(this, "File Manager Thread");
+        FileManagerThread.start();   
+    }
+    public void run()
+    {
+        BufferedReader in;
+        try
+        {
+            Thread.sleep(1500);
+            in = new BufferedReader(new FileReader("database.txt"));
+            String str;
+            for(int i = 0; i <= data.Data.fileLines - 1; i++)
+            {
+                if ((str = in.readLine()) != null)
+                {
+                    filemanager.Filemanager.fileArray[i] = str.toString();
+                }
+                else
+                {
+                   filemanager.Filemanager.fileArray[i] = "";
+                }
+            }
+            in.close();
+        }
+        catch (InterruptedException e)
+        {
+            say.Say.error("----", e.toString());
+        }
+        catch (IOException e)
+        {
+            say.Say.error("----", e.toString());
+        }
+    }
+    public static void save()
+    {
+        BufferedWriter out;
+        try
+        {
+            out = new BufferedWriter(new FileWriter("database.txt", true));
+            out.close();
+        }
+        catch (IOException e)
+        {
+            say.Say.error("----", e.toString());
+        }
+    }
 }
